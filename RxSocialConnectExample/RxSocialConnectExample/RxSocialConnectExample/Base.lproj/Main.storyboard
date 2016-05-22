@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="DnI-Qo-Dq5">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="dt9-iE-k72">
+            <objects>
+                <viewController id="DnI-Qo-Dq5" customClass="ViewController" customModule="RxSocialConnectExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NWi-eR-5Cv"/>
+                        <viewControllerLayoutGuide type="bottom" id="tcg-5j-E8v"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hPp-tL-Fcl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNA-j4-vNo">
+                                <rect key="frame" x="20" y="70" width="48" height="30"/>
+                                <state key="normal" title="Twitter"/>
+                                <connections>
+                                    <action selector="twitterButtonPressed:" destination="DnI-Qo-Dq5" eventType="touchUpInside" id="CJT-T7-fYr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CzG-8a-Crg">
+                                <rect key="frame" x="20" y="120" width="67" height="30"/>
+                                <state key="normal" title="Facebook"/>
+                                <connections>
+                                    <action selector="facebookButtonPressed:" destination="DnI-Qo-Dq5" eventType="touchUpInside" id="pWH-Vl-cGb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IuG-r1-jmn">
+                                <rect key="frame" x="20" y="170" width="69" height="30"/>
+                                <state key="normal" title="Instagram"/>
+                                <connections>
+                                    <action selector="instagramButtonPressed:" destination="DnI-Qo-Dq5" eventType="touchUpInside" id="DLr-dj-buu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpU-pE-yc6">
+                                <rect key="frame" x="20" y="220" width="50" height="30"/>
+                                <state key="normal" title="Google"/>
+                                <connections>
+                                    <action selector="googleButtonPressed:" destination="DnI-Qo-Dq5" eventType="touchUpInside" id="WuF-gB-mLJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xnT-nH-E6p">
+                                <rect key="frame" x="20" y="270" width="58" height="30"/>
+                                <state key="normal" title="Linkedin"/>
+                                <connections>
+                                    <action selector="linkedinButtonPressed:" destination="DnI-Qo-Dq5" eventType="touchUpInside" id="muN-Qn-9sZ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RxSocialConnect Examples" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sUZ-GS-vvS">
+                                <rect key="frame" x="196" y="28" width="208" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HTN-t6-u5G">
+                                <rect key="frame" x="490" y="70" width="90" height="30"/>
+                                <state key="normal" title="Close Twitter"/>
+                                <connections>
+                                    <action selector="disconnectTwitterButtonPressed:" destination="DnI-Qo-Dq5" eventType="touchUpInside" id="xwy-BG-9Vv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uIE-yD-bcE">
+                                <rect key="frame" x="470" y="120" width="110" height="30"/>
+                                <state key="normal" title="Close Facebook"/>
+                                <connections>
+                                    <action selector="disconnectFacebookButtonPressed:" destination="DnI-Qo-Dq5" eventType="touchUpInside" id="e1I-h1-lez"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vuk-9c-xko">
+                                <rect key="frame" x="469" y="170" width="111" height="30"/>
+                                <state key="normal" title="Close Instagram"/>
+                                <connections>
+                                    <action selector="disconnectInstagramButtonPressed:" destination="DnI-Qo-Dq5" eventType="touchUpInside" id="582-tH-FDc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xy7-FD-QDq">
+                                <rect key="frame" x="488" y="220" width="92" height="30"/>
+                                <state key="normal" title="Close Google"/>
+                                <connections>
+                                    <action selector="disconnectGoogleButtonPressed:" destination="DnI-Qo-Dq5" eventType="touchUpInside" id="EzR-ne-igm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MbN-rT-sUs">
+                                <rect key="frame" x="480" y="270" width="100" height="30"/>
+                                <state key="normal" title="Close Linkedin"/>
+                                <connections>
+                                    <action selector="disconnectLinkedinButtonPressed:" destination="DnI-Qo-Dq5" eventType="touchUpInside" id="Afr-Es-nhQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZ2-af-yip">
+                                <rect key="frame" x="522" y="320" width="58" height="30"/>
+                                <state key="normal" title="Close all"/>
+                                <connections>
+                                    <action selector="disconnectAllButtonPressed:" destination="DnI-Qo-Dq5" eventType="touchUpInside" id="qOd-KP-l0K"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xy7-FD-QDq" firstAttribute="top" secondItem="Vuk-9c-xko" secondAttribute="bottom" constant="20" id="5av-xm-X1x"/>
+                            <constraint firstItem="sUZ-GS-vvS" firstAttribute="centerX" secondItem="hPp-tL-Fcl" secondAttribute="centerX" id="6il-Jh-xS4"/>
+                            <constraint firstItem="xnT-nH-E6p" firstAttribute="top" secondItem="mpU-pE-yc6" secondAttribute="bottom" constant="20" id="ANR-zM-klD"/>
+                            <constraint firstItem="MbN-rT-sUs" firstAttribute="top" secondItem="xy7-FD-QDq" secondAttribute="bottom" constant="20" id="B0d-bJ-NnN"/>
+                            <constraint firstItem="HTN-t6-u5G" firstAttribute="centerY" secondItem="vNA-j4-vNo" secondAttribute="centerY" id="DAX-Qe-hRf"/>
+                            <constraint firstAttribute="trailing" secondItem="HTN-t6-u5G" secondAttribute="trailing" constant="20" id="EFm-mS-gL8"/>
+                            <constraint firstItem="uIE-yD-bcE" firstAttribute="top" secondItem="HTN-t6-u5G" secondAttribute="bottom" constant="20" id="Kwi-kR-yZQ"/>
+                            <constraint firstAttribute="trailing" secondItem="xy7-FD-QDq" secondAttribute="trailing" constant="20" id="Qov-c0-FSe"/>
+                            <constraint firstItem="pZ2-af-yip" firstAttribute="top" secondItem="MbN-rT-sUs" secondAttribute="bottom" constant="20" id="RLk-Ev-nA2"/>
+                            <constraint firstItem="mpU-pE-yc6" firstAttribute="leading" secondItem="hPp-tL-Fcl" secondAttribute="leading" constant="20" id="RZg-w8-nhd"/>
+                            <constraint firstAttribute="trailing" secondItem="Vuk-9c-xko" secondAttribute="trailing" constant="20" id="Rtu-kd-VYU"/>
+                            <constraint firstItem="vNA-j4-vNo" firstAttribute="top" secondItem="NWi-eR-5Cv" secondAttribute="bottom" constant="50" id="SI8-tI-ZnC"/>
+                            <constraint firstItem="IuG-r1-jmn" firstAttribute="leading" secondItem="hPp-tL-Fcl" secondAttribute="leading" constant="20" id="W0L-v0-QEe"/>
+                            <constraint firstAttribute="trailing" secondItem="uIE-yD-bcE" secondAttribute="trailing" constant="20" id="YOs-NJ-cCU"/>
+                            <constraint firstItem="sUZ-GS-vvS" firstAttribute="top" secondItem="NWi-eR-5Cv" secondAttribute="bottom" constant="8" id="cmx-6u-eIh"/>
+                            <constraint firstItem="xnT-nH-E6p" firstAttribute="leading" secondItem="hPp-tL-Fcl" secondAttribute="leading" constant="20" id="dfS-Yg-y8s"/>
+                            <constraint firstItem="mpU-pE-yc6" firstAttribute="top" secondItem="IuG-r1-jmn" secondAttribute="bottom" constant="20" id="eSn-bs-0wB"/>
+                            <constraint firstAttribute="trailing" secondItem="pZ2-af-yip" secondAttribute="trailing" constant="20" id="ioJ-sn-3zd"/>
+                            <constraint firstItem="IuG-r1-jmn" firstAttribute="top" secondItem="CzG-8a-Crg" secondAttribute="bottom" constant="20" id="m2T-M2-6cz"/>
+                            <constraint firstItem="vNA-j4-vNo" firstAttribute="leading" secondItem="hPp-tL-Fcl" secondAttribute="leading" constant="20" id="pMk-pd-E25"/>
+                            <constraint firstItem="CzG-8a-Crg" firstAttribute="leading" secondItem="hPp-tL-Fcl" secondAttribute="leading" constant="20" id="r2R-4d-tEf"/>
+                            <constraint firstAttribute="trailing" secondItem="MbN-rT-sUs" secondAttribute="trailing" constant="20" id="uvy-Sb-eEH"/>
+                            <constraint firstItem="Vuk-9c-xko" firstAttribute="top" secondItem="uIE-yD-bcE" secondAttribute="bottom" constant="20" id="xff-zT-ReP"/>
+                            <constraint firstItem="CzG-8a-Crg" firstAttribute="top" secondItem="vNA-j4-vNo" secondAttribute="bottom" constant="20" id="yDc-Yh-YVU"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e7v-BG-G1R" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,11 @@
+platform :ios, '8.0'
+use_frameworks!
+
+pod 'OAuthSwift', '~> 0.5.0'
+pod 'RxSwift', '~> 2.0.0'
+
+target 'RxSocialConnectTests', :exclusive => true do
+    pod 'Nimble', '~> 3.0.0'
+    pod 'RxTests', '~> 2.0'
+    pod 'RxBlocking', '~> 2.0'
+end
