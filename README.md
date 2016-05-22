@@ -3,7 +3,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/RxSocialConnect.svg?style=flat)](http://cocoapods.org/pods/RxSocialConnect)
 [![Language](https://img.shields.io/badge/language-swift-orange.svg?style=flat)](https://developer.apple.com/swift)
 
-OAuth RxSwift extension for iOS.
+OAuth RxSwift extension for iOS. Android version is located at this [repository](https://github.com/FuckBoilerplate/RxSocialConnect-Android).
 
 # RxSocialConnect-iOS
 
