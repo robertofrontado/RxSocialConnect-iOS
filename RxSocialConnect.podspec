@@ -16,5 +16,6 @@ Pod::Spec.new do |s|
   s.source_files = 'Sources/**/*'
 
   s.dependency "RxSwift", "~> 2.0.0"
+  s.dependency "OAuthSwift", "~> 0.5.0"
   
 end
