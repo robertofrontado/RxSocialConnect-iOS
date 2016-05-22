@@ -1,3 +1,7 @@
+[![Version](https://img.shields.io/cocoapods/v/RxSocialConnect.svg?style=flat)](http://cocoapods.org/pods/RxSocialConnect)
+[![License](https://img.shields.io/cocoapods/l/RxSocialConnect.svg?style=flat)](http://cocoapods.org/pods/RxSocialConnect)
+[![Platform](https://img.shields.io/cocoapods/p/RxSocialConnect.svg?style=flat)](http://cocoapods.org/pods/RxSocialConnect)
+[![Language](https://img.shields.io/badge/language-swift-orange.svg?style=flat)](https://developer.apple.com/swift)
 
 OAuth RxSwift extension for iOS.
 
@@ -23,7 +27,7 @@ RxSocialConnect.with(self, providerOAuth20: facebookApi20)
 
 Add RxSocialConnect-iOS to your podfile
 ```
-pod 'RxSocialConnect-iOS'
+pod 'RxSocialConnect'
 ```
 
 # Usage
