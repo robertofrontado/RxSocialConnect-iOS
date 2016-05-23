@@ -8,16 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		39BC09C73E4F7E4485AC19B9 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CD6A8673BDA525208DDA67C /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		A284D7551CEF6BA30026F300 /* FacebookApi20.swift in Sources */ = {isa = PBXBuildFile; fileRef = A284D7491CEF6BA30026F300 /* FacebookApi20.swift */; };
-		A284D7561CEF6BA30026F300 /* GoogleApi20.swift in Sources */ = {isa = PBXBuildFile; fileRef = A284D74A1CEF6BA30026F300 /* GoogleApi20.swift */; };
-		A284D7571CEF6BA30026F300 /* InstagramApi20.swift in Sources */ = {isa = PBXBuildFile; fileRef = A284D74B1CEF6BA30026F300 /* InstagramApi20.swift */; };
-		A284D7581CEF6BA30026F300 /* LinkedinApi20.swift in Sources */ = {isa = PBXBuildFile; fileRef = A284D74C1CEF6BA30026F300 /* LinkedinApi20.swift */; };
-		A284D7591CEF6BA30026F300 /* TwitterApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A284D74D1CEF6BA30026F300 /* TwitterApi.swift */; };
-		A284D75A1CEF6BA30026F300 /* CustomURLHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A284D74E1CEF6BA30026F300 /* CustomURLHandler.swift */; };
-		A284D75B1CEF6BA30026F300 /* TokenPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A284D7501CEF6BA30026F300 /* TokenPersistence.swift */; };
-		A284D75C1CEF6BA30026F300 /* ProviderOAuth1.swift in Sources */ = {isa = PBXBuildFile; fileRef = A284D7521CEF6BA30026F300 /* ProviderOAuth1.swift */; };
-		A284D75D1CEF6BA30026F300 /* ProviderOAuth20.swift in Sources */ = {isa = PBXBuildFile; fileRef = A284D7531CEF6BA30026F300 /* ProviderOAuth20.swift */; };
-		A284D75E1CEF6BA30026F300 /* RxSocialConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = A284D7541CEF6BA30026F300 /* RxSocialConnect.swift */; };
+		A25914281CF3866A00580A47 /* FacebookApi20.swift in Sources */ = {isa = PBXBuildFile; fileRef = A259141B1CF3866A00580A47 /* FacebookApi20.swift */; };
+		A25914291CF3866A00580A47 /* GoogleApi20.swift in Sources */ = {isa = PBXBuildFile; fileRef = A259141C1CF3866A00580A47 /* GoogleApi20.swift */; };
+		A259142A1CF3866A00580A47 /* InstagramApi20.swift in Sources */ = {isa = PBXBuildFile; fileRef = A259141D1CF3866A00580A47 /* InstagramApi20.swift */; };
+		A259142B1CF3866A00580A47 /* LinkedinApi20.swift in Sources */ = {isa = PBXBuildFile; fileRef = A259141E1CF3866A00580A47 /* LinkedinApi20.swift */; };
+		A259142C1CF3866A00580A47 /* TwitterApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A259141F1CF3866A00580A47 /* TwitterApi.swift */; };
+		A259142D1CF3866A00580A47 /* CustomURLHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25914211CF3866A00580A47 /* CustomURLHandler.swift */; };
+		A259142F1CF3866A00580A47 /* ProviderOAuth1.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25914251CF3866A00580A47 /* ProviderOAuth1.swift */; };
+		A25914301CF3866A00580A47 /* ProviderOAuth20.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25914261CF3866A00580A47 /* ProviderOAuth20.swift */; };
+		A25914311CF3866A00580A47 /* RxSocialConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25914271CF3866A00580A47 /* RxSocialConnect.swift */; };
+		A25914351CF3871E00580A47 /* TokenCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25914341CF3871E00580A47 /* TokenCache.swift */; };
+		A25914371CF3872500580A47 /* Disk.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25914361CF3872500580A47 /* Disk.swift */; };
+		A25914561CF38F8700580A47 /* NotActiveTokenFoundException.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25914551CF38F8700580A47 /* NotActiveTokenFoundException.swift */; };
 		A2BBB0BC1CECFA960059387B /* RxSocialConnect.h in Headers */ = {isa = PBXBuildFile; fileRef = A2BBB0BB1CECFA960059387B /* RxSocialConnect.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A2BBB0C31CECFA960059387B /* RxSocialConnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2BBB0B81CECFA960059387B /* RxSocialConnect.framework */; };
 		A2BBB0C81CECFA960059387B /* RxSocialConnectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BBB0C71CECFA960059387B /* RxSocialConnectTests.swift */; };
@@ -40,16 +42,18 @@
 		5CD6A8673BDA525208DDA67C /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73A93038DA575353AF9BDC20 /* Pods_RxSocialConnectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSocialConnectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FBFDBAE54039D0C02607343 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		A284D7491CEF6BA30026F300 /* FacebookApi20.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookApi20.swift; sourceTree = "<group>"; };
-		A284D74A1CEF6BA30026F300 /* GoogleApi20.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleApi20.swift; sourceTree = "<group>"; };
-		A284D74B1CEF6BA30026F300 /* InstagramApi20.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstagramApi20.swift; sourceTree = "<group>"; };
-		A284D74C1CEF6BA30026F300 /* LinkedinApi20.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedinApi20.swift; sourceTree = "<group>"; };
-		A284D74D1CEF6BA30026F300 /* TwitterApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterApi.swift; sourceTree = "<group>"; };
-		A284D74E1CEF6BA30026F300 /* CustomURLHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomURLHandler.swift; sourceTree = "<group>"; };
-		A284D7501CEF6BA30026F300 /* TokenPersistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenPersistence.swift; sourceTree = "<group>"; };
-		A284D7521CEF6BA30026F300 /* ProviderOAuth1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderOAuth1.swift; sourceTree = "<group>"; };
-		A284D7531CEF6BA30026F300 /* ProviderOAuth20.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderOAuth20.swift; sourceTree = "<group>"; };
-		A284D7541CEF6BA30026F300 /* RxSocialConnect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxSocialConnect.swift; sourceTree = "<group>"; };
+		A259141B1CF3866A00580A47 /* FacebookApi20.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookApi20.swift; sourceTree = "<group>"; };
+		A259141C1CF3866A00580A47 /* GoogleApi20.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleApi20.swift; sourceTree = "<group>"; };
+		A259141D1CF3866A00580A47 /* InstagramApi20.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstagramApi20.swift; sourceTree = "<group>"; };
+		A259141E1CF3866A00580A47 /* LinkedinApi20.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedinApi20.swift; sourceTree = "<group>"; };
+		A259141F1CF3866A00580A47 /* TwitterApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterApi.swift; sourceTree = "<group>"; };
+		A25914211CF3866A00580A47 /* CustomURLHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomURLHandler.swift; sourceTree = "<group>"; };
+		A25914251CF3866A00580A47 /* ProviderOAuth1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderOAuth1.swift; sourceTree = "<group>"; };
+		A25914261CF3866A00580A47 /* ProviderOAuth20.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderOAuth20.swift; sourceTree = "<group>"; };
+		A25914271CF3866A00580A47 /* RxSocialConnect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxSocialConnect.swift; sourceTree = "<group>"; };
+		A25914341CF3871E00580A47 /* TokenCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenCache.swift; sourceTree = "<group>"; };
+		A25914361CF3872500580A47 /* Disk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disk.swift; sourceTree = "<group>"; };
+		A25914551CF38F8700580A47 /* NotActiveTokenFoundException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotActiveTokenFoundException.swift; sourceTree = "<group>"; };
 		A2BBB0B81CECFA960059387B /* RxSocialConnect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSocialConnect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2BBB0BB1CECFA960059387B /* RxSocialConnect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RxSocialConnect.h; sourceTree = "<group>"; };
 		A2BBB0BD1CECFA960059387B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -100,44 +104,54 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A284D7471CEF6BA30026F300 /* Sources */ = {
+		A25914191CF3866A00580A47 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				A284D7541CEF6BA30026F300 /* RxSocialConnect.swift */,
-				A284D74E1CEF6BA30026F300 /* CustomURLHandler.swift */,
-				A284D7481CEF6BA30026F300 /* Apis */,
-				A284D74F1CEF6BA30026F300 /* Persistence */,
-				A284D7511CEF6BA30026F300 /* Providers */,
+				A25914271CF3866A00580A47 /* RxSocialConnect.swift */,
+				A25914551CF38F8700580A47 /* NotActiveTokenFoundException.swift */,
+				A259141A1CF3866A00580A47 /* Apis */,
+				A25914201CF3866A00580A47 /* Internal */,
+				A25914241CF3866A00580A47 /* Providers */,
 			);
 			name = Sources;
 			path = ../../Sources;
 			sourceTree = "<group>";
 		};
-		A284D7481CEF6BA30026F300 /* Apis */ = {
+		A259141A1CF3866A00580A47 /* Apis */ = {
 			isa = PBXGroup;
 			children = (
-				A284D7491CEF6BA30026F300 /* FacebookApi20.swift */,
-				A284D74A1CEF6BA30026F300 /* GoogleApi20.swift */,
-				A284D74B1CEF6BA30026F300 /* InstagramApi20.swift */,
-				A284D74C1CEF6BA30026F300 /* LinkedinApi20.swift */,
-				A284D74D1CEF6BA30026F300 /* TwitterApi.swift */,
+				A259141B1CF3866A00580A47 /* FacebookApi20.swift */,
+				A259141C1CF3866A00580A47 /* GoogleApi20.swift */,
+				A259141D1CF3866A00580A47 /* InstagramApi20.swift */,
+				A259141E1CF3866A00580A47 /* LinkedinApi20.swift */,
+				A259141F1CF3866A00580A47 /* TwitterApi.swift */,
 			);
 			path = Apis;
 			sourceTree = "<group>";
 		};
-		A284D74F1CEF6BA30026F300 /* Persistence */ = {
+		A25914201CF3866A00580A47 /* Internal */ = {
 			isa = PBXGroup;
 			children = (
-				A284D7501CEF6BA30026F300 /* TokenPersistence.swift */,
+				A25914211CF3866A00580A47 /* CustomURLHandler.swift */,
+				A25914221CF3866A00580A47 /* Persistence */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		A25914221CF3866A00580A47 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				A25914341CF3871E00580A47 /* TokenCache.swift */,
+				A25914361CF3872500580A47 /* Disk.swift */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
 		};
-		A284D7511CEF6BA30026F300 /* Providers */ = {
+		A25914241CF3866A00580A47 /* Providers */ = {
 			isa = PBXGroup;
 			children = (
-				A284D7521CEF6BA30026F300 /* ProviderOAuth1.swift */,
-				A284D7531CEF6BA30026F300 /* ProviderOAuth20.swift */,
+				A25914251CF3866A00580A47 /* ProviderOAuth1.swift */,
+				A25914261CF3866A00580A47 /* ProviderOAuth20.swift */,
 			);
 			path = Providers;
 			sourceTree = "<group>";
@@ -165,7 +179,7 @@
 		A2BBB0BA1CECFA960059387B /* RxSocialConnect */ = {
 			isa = PBXGroup;
 			children = (
-				A284D7471CEF6BA30026F300 /* Sources */,
+				A25914191CF3866A00580A47 /* Sources */,
 				A2BBB0BB1CECFA960059387B /* RxSocialConnect.h */,
 				A2BBB0BD1CECFA960059387B /* Info.plist */,
 			);
@@ -372,16 +386,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A284D7581CEF6BA30026F300 /* LinkedinApi20.swift in Sources */,
-				A284D7551CEF6BA30026F300 /* FacebookApi20.swift in Sources */,
-				A284D75D1CEF6BA30026F300 /* ProviderOAuth20.swift in Sources */,
-				A284D75E1CEF6BA30026F300 /* RxSocialConnect.swift in Sources */,
-				A284D7591CEF6BA30026F300 /* TwitterApi.swift in Sources */,
-				A284D7571CEF6BA30026F300 /* InstagramApi20.swift in Sources */,
-				A284D75C1CEF6BA30026F300 /* ProviderOAuth1.swift in Sources */,
-				A284D7561CEF6BA30026F300 /* GoogleApi20.swift in Sources */,
-				A284D75B1CEF6BA30026F300 /* TokenPersistence.swift in Sources */,
-				A284D75A1CEF6BA30026F300 /* CustomURLHandler.swift in Sources */,
+				A25914351CF3871E00580A47 /* TokenCache.swift in Sources */,
+				A259142B1CF3866A00580A47 /* LinkedinApi20.swift in Sources */,
+				A25914561CF38F8700580A47 /* NotActiveTokenFoundException.swift in Sources */,
+				A25914281CF3866A00580A47 /* FacebookApi20.swift in Sources */,
+				A25914301CF3866A00580A47 /* ProviderOAuth20.swift in Sources */,
+				A25914311CF3866A00580A47 /* RxSocialConnect.swift in Sources */,
+				A259142C1CF3866A00580A47 /* TwitterApi.swift in Sources */,
+				A259142A1CF3866A00580A47 /* InstagramApi20.swift in Sources */,
+				A259142F1CF3866A00580A47 /* ProviderOAuth1.swift in Sources */,
+				A25914291CF3866A00580A47 /* GoogleApi20.swift in Sources */,
+				A25914371CF3872500580A47 /* Disk.swift in Sources */,
+				A259142D1CF3866A00580A47 /* CustomURLHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
