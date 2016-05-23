@@ -1,16 +1,15 @@
 //
-//  TokenPersistence.swift
+//  Disk.swift
 //  RxSocialConnect
 //
-//  Created by Roberto Frontado on 5/18/16.
+//  Created by Roberto Frontado on 5/23/16.
 //  Copyright © 2016 Roberto Frontado. All rights reserved.
 //
 
-import Foundation
 import OAuthSwift
 import RxSwift
 
-public class TokenPersistence {
+public class Disk {
     
     private let cacheDirectory: String
     private let NAME_DIR = "RxSocialConnect"

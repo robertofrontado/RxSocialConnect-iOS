@@ -15,10 +15,9 @@ public class RxSocialConnect {
     
     public static func with<T: ProviderOAuth1>(viewController: UIViewController, providerOAuth1: T) -> Observable<OAuthSwiftCredential> {
         
-        let tokenPersistence = TokenPersistence()
         let key = String(T)
 
-        if let response = tokenPersistence.get(key, classToken: OAuthSwiftCredential.self) {
+        if let response = TokenCache.INSTANCE.get(key, classToken: OAuthSwiftCredential.self) {
             return response
         }
         
@@ -32,7 +31,7 @@ public class RxSocialConnect {
                 providerOAuth1.callbackUrl,
                 success: { credential, response, parameters in
                     parseParametersIntoCredential(credential, parameters: parameters)
-                    tokenPersistence.save(key, data: credential)
+                    TokenCache.INSTANCE.save(key, data: credential)
                     subscribe.onNext(credential)
                     subscribe.onCompleted()
                 },
@@ -49,10 +48,9 @@ public class RxSocialConnect {
     
     public static func with<T: ProviderOAuth20>(viewController: UIViewController, providerOAuth20: T) -> Observable<OAuthSwiftCredential> {
         
-        let tokenPersistence = TokenPersistence()
         let key = String(T)
         
-        if let response = tokenPersistence.get(key, classToken: OAuthSwiftCredential.self) {
+        if let response = TokenCache.INSTANCE.get(key, classToken: OAuthSwiftCredential.self) {
             return response
         }
         
@@ -70,7 +68,7 @@ public class RxSocialConnect {
                 state: state,
                 success: { credential, response, parameters in
                     parseParametersIntoCredential(credential, parameters: parameters)
-                    tokenPersistence.save(key, data: credential)
+                    TokenCache.INSTANCE.save(key, data: credential)
                     subscribe.onNext(credential)
                     subscribe.onCompleted()
                 },
@@ -87,17 +85,28 @@ public class RxSocialConnect {
     
     public static func closeConnection<T>(classToken: T.Type) -> Observable<Void> {
         return Observable.deferred {
-            let tokenPersistence = TokenPersistence()
-            tokenPersistence.evict(String(classToken))
+            TokenCache.INSTANCE.evict(String(classToken))
             return Observable.just()
         }
     }
     
     public static func closeConnections() -> Observable<Void> {
         return Observable.deferred {
-            let tokenPersistence = TokenPersistence()
-            tokenPersistence.evictAll()
+            TokenCache.INSTANCE.evictAll()
             return Observable.just()
+        }
+    }
+    
+    public static func getOAuthCredential<T>(classToken: T.Type) -> Observable<OAuthSwiftCredential> {
+        return Observable.deferred {
+            
+            let key = String(T)
+            
+            if let credential = TokenCache.INSTANCE.get(key, classToken: OAuthSwiftCredential.self) {
+                return credential
+            }
+            
+            return Observable.error(NotActiveTokenFoundException.error)
         }
     }
     
