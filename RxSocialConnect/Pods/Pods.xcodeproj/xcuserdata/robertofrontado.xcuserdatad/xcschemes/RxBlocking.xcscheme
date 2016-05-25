@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EE3BAF2620B3FA7CBE1886FB"
+               BlueprintIdentifier = "769185DFEA965B4BFEF93DF6"
                BuildableName = "RxBlocking.framework"
                BlueprintName = "RxBlocking"
                ReferencedContainer = "container:Pods.xcodeproj">

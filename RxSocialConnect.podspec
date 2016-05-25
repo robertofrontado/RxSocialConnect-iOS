@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.dependency 'RxSwift', '~> 2.0.0'
   s.dependency 'OAuthSwift', '~> 0.5.0'
   s.dependency 'RxBlocking', '~> 2.0.0'
-
+  
   s.default_subspec = "Core"
 
   s.subspec "Core" do |ss|
@@ -26,8 +26,8 @@ Pod::Spec.new do |s|
   s.subspec "Moya" do |ss|
     ss.source_files = 'Sources/Moya/**/*'
     ss.dependency 'RxSocialConnect/Core'
-    ss.dependency 'Alamofire'
-    ss.dependency 'Moya'
+    ss.dependency 'Alamofire', '~> 3.1.0'
+    ss.dependency 'Moya', '~> 6.3.0'
     ss.dependency 'Moya/RxSwift'
   end
 
