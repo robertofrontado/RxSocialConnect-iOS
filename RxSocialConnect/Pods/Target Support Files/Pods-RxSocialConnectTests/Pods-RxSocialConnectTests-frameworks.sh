@@ -54,12 +54,10 @@ code_sign_if_enabled() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Pods-RxSocialConnectTests/RxSwift.framework'
   install_framework 'Pods-RxSocialConnectTests/Nimble.framework'
-  install_framework 'Pods-RxSocialConnectTests/RxBlocking.framework'
   install_framework 'Pods-RxSocialConnectTests/RxTests.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Pods-RxSocialConnectTests/RxSwift.framework'
   install_framework 'Pods-RxSocialConnectTests/Nimble.framework'
-  install_framework 'Pods-RxSocialConnectTests/RxBlocking.framework'
   install_framework 'Pods-RxSocialConnectTests/RxTests.framework'
 fi

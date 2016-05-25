@@ -30,6 +30,11 @@ Add RxSocialConnect-iOS to your podfile
 pod 'RxSocialConnect'
 ```
 
+It also has a module which works with Moya (To configure OAuth headers in the endpointClosure)
+```
+pod 'RxSocialConnect/Moya'
+```
+
 # Usage
 
 ## Retrieving tokens using OAuth1
@@ -86,6 +91,25 @@ You can also close all the connections at once, calling `RxSocialConnect.closeCo
 ```swift
 RxSocialConnect.closeConnections()
 	.subscribeNext { self.showAlert("All disconnected") }
+```
+
+# Moya
+
+Its really easy, the only thing you need to do is to call this method and it will add the OAuth headers to your endpoint:
+
+```swift
+RxSocialConnect.addOAuthHeaders(/*ProviderOAuth 1 or 20 */, endpoint: endpoint)
+```
+
+Here is an example using FacebookApi20 provider:
+
+```swift
+// MARK: - Endpoint Closure
+let endpointClosure = { (target: Target) -> Endpoint<Target> in
+    let endpoint: Endpoint<Target> = Endpoint<Target>(URL: url(target), sampleResponseClosure: {.NetworkResponse(200, target.sampleData)}, method: target.method, parameters: target.parameters, parameterEncoding: target.parameterEncoding)
+    // Add this line to add OAuthHeaders
+    return RxSocialConnect.addOAuthHeaders(FacebookApi20.self, endpoint: endpoint)
+}
 ```
 
 # Credits

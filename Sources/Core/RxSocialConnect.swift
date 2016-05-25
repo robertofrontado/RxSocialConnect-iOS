@@ -34,6 +34,15 @@ public class RxSocialConnect {
                     TokenCache.INSTANCE.save(key, data: credential)
                     subscribe.onNext(credential)
                     subscribe.onCompleted()
+                    
+                    oauth1Swift.client.get("https://api.twitter.com/1.1/statuses/mentions_timeline.json", parameters: [:],
+                        success: {
+                            data, response in
+                            let jsonDict: AnyObject! = try? NSJSONSerialization.JSONObjectWithData(data, options: [])
+                            print(jsonDict)
+                        }, failure: { error in
+                            print(error)
+                    })
                 },
                 failure: { error in
                     print(error.localizedDescription)

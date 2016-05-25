@@ -11,6 +11,8 @@ import OAuthSwift
 
 class ViewController: UIViewController {
     
+    let facebookApiMoya = FacebookApiMoya()
+    
     // MARK: - Private methods
     private func showResponse(credential: OAuthSwiftCredential) {
         showAlert("Token: " + credential.oauth_token)
@@ -54,7 +56,14 @@ class ViewController: UIViewController {
         )
         
         RxSocialConnect.with(self, providerOAuth20: facebookApi20)
-            .subscribe(onNext: { self.showResponse($0) },
+            .subscribe(onNext: { credential in
+                self.showResponse(credential)
+                // Testing Facebook
+                self.facebookApiMoya.getMe()
+                    .subscribe(onNext: { (response) -> Void in
+                        print(NSString(data: response.data, encoding: NSUTF8StringEncoding))
+                        }, onError: { self.showError($0 as NSError) })
+                },
                 onError: { self.showError($0 as NSError) })
     }
     

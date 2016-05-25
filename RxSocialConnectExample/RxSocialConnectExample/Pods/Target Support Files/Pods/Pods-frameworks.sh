@@ -52,10 +52,18 @@ code_sign_if_enabled() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework 'Pods/Alamofire.framework'
+  install_framework 'Pods/Moya.framework'
   install_framework 'Pods/OAuthSwift.framework'
+  install_framework 'Pods/Result.framework'
+  install_framework 'Pods/RxBlocking.framework'
   install_framework 'Pods/RxSwift.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework 'Pods/Alamofire.framework'
+  install_framework 'Pods/Moya.framework'
   install_framework 'Pods/OAuthSwift.framework'
+  install_framework 'Pods/Result.framework'
+  install_framework 'Pods/RxBlocking.framework'
   install_framework 'Pods/RxSwift.framework'
 fi

@@ -4,12 +4,32 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Moya.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>OAuthSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>Pods.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Result.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RxBlocking.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -22,17 +42,47 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>8501C8295DA4380C6A3704BB1C21349F</key>
+		<key>56FCBF980FB69ECBC51170412F6AD316</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9CF0C50606ECC7768E6A30B99AA8113C</key>
+		<key>5C2634CCCA1A6E25A397186075D7AF6B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9FDA44292DF3D72E9D2FBDE176ED1780</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AF6218C8736121B82C0DA0FDA9BD14D7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B4F092062F08AA60CFEA256B4C19BEE2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D02E08439589872996252F4061652195</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D29E3661E1967641B23ACCF0CEC96494</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>D40515521E79700BBCB1090E1CC3A3AE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EDF6D13B17FD4AF45352EE1196770A7A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

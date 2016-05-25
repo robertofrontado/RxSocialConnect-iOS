@@ -8,7 +8,7 @@
 
 import OAuthSwift
 
-public protocol ProviderOAuth20 {
+public protocol ProviderOAuth20: ProviderOAuth {
     
     var consumerKey: String {get set}
     var consumerSecret: String {get set}
