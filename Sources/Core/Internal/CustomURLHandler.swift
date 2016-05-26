@@ -89,6 +89,12 @@ class CustomWebViewController: UIViewController, UIWebViewDelegate {
         webView.delegate = self
         view.addSubview(webView)
         
+        let cookieJar = NSHTTPCookieStorage.sharedHTTPCookieStorage()
+        
+        for cookie in cookieJar.cookies! {
+            cookieJar.deleteCookie(cookie)
+        }
+        
         webView.loadRequest(NSURLRequest(URL:url))
     }
     
