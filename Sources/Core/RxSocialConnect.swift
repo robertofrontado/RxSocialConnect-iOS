@@ -15,7 +15,7 @@ public class RxSocialConnect {
     
     public static func with<T: ProviderOAuth1>(viewController: UIViewController, providerOAuth1: T) -> Observable<OAuthSwiftCredential> {
         
-        let key = String(T)
+        let key = String(T).componentsSeparatedByString(".").last!
 
         if let response = TokenCache.INSTANCE.get(key, classToken: OAuthSwiftCredential.self) {
             return response
@@ -57,7 +57,7 @@ public class RxSocialConnect {
     
     public static func with<T: ProviderOAuth20>(viewController: UIViewController, providerOAuth20: T) -> Observable<OAuthSwiftCredential> {
         
-        let key = String(T)
+        let key = String(T).componentsSeparatedByString(".").last!
         
         if let response = TokenCache.INSTANCE.get(key, classToken: OAuthSwiftCredential.self) {
             return response
@@ -94,7 +94,8 @@ public class RxSocialConnect {
     
     public static func closeConnection<T>(classToken: T.Type) -> Observable<Void> {
         return Observable.deferred {
-            TokenCache.INSTANCE.evict(String(classToken))
+            let key = String(classToken).componentsSeparatedByString(".").last!
+            TokenCache.INSTANCE.evict(key)
             return Observable.just()
         }
     }
@@ -109,7 +110,7 @@ public class RxSocialConnect {
     public static func getOAuthCredential<T>(classToken: T.Type) -> Observable<OAuthSwiftCredential> {
         return Observable.deferred {
             
-            let key = String(T)
+            let key = String(T).componentsSeparatedByString(".").last!
             
             if let credential = TokenCache.INSTANCE.get(key, classToken: OAuthSwiftCredential.self) {
                 return credential
