@@ -6,5 +6,6 @@ pod 'RxSwift', '~> 2.0.0'
 pod 'RxBlocking', '~> 2.0.0'
 
 pod 'Alamofire', '~> 3.1.0'
-pod 'Moya', '~> 6.3.0'
+pod 'Result', '~> 1.0.0'
+pod 'Moya'
 pod 'Moya/RxSwift'
