@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "RxSocialConnect"
-  s.version      = "0.0.5"
+  s.version      = "0.0.6"
   s.summary      = "OAuth RxSwift extension for iOS."
 
   s.homepage     = "https://github.com/FuckBoilerplate/RxSocialConnect-iOS"
@@ -27,9 +27,8 @@ Pod::Spec.new do |s|
     ss.source_files = 'Sources/Moya/**/*'
     ss.dependency 'RxSocialConnect/Core'
     ss.dependency 'Alamofire', '~> 3.1.0'
-    ss.dependency 'Moya'
-    ss.dependency 'Result', '~> 1.0.0'
-    ss.dependency 'Moya/RxSwift'
+    ss.dependency 'Moya', '~> 6.0.0'
+    ss.dependency 'Moya/RxSwift', '~> 6.0.0'
   end
 
 end
