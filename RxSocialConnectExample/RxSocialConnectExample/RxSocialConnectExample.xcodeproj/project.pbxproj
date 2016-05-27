@@ -29,6 +29,7 @@
 		A2D443631CF61E7700BAA70A /* ProviderOAuth20.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D443551CF61E7700BAA70A /* ProviderOAuth20.swift */; };
 		A2D443641CF61E7700BAA70A /* RxSocialConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D443561CF61E7700BAA70A /* RxSocialConnect.swift */; };
 		A2D443651CF61E7700BAA70A /* RxSocialConnect+Moya.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D443581CF61E7700BAA70A /* RxSocialConnect+Moya.swift */; };
+		BDE107D9498924D528F1B643 /* Pods_RxSocialConnectExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9E6CFD701533FE127B9A024 /* Pods_RxSocialConnectExample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +51,9 @@
 
 /* Begin PBXFileReference section */
 		239EA7A0C8AAF89E643ECCA0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		31BCC03877B4C8728E934323 /* Pods-RxSocialConnectExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSocialConnectExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSocialConnectExample/Pods-RxSocialConnectExample.debug.xcconfig"; sourceTree = "<group>"; };
 		4367DD07B79D5A76EF0B64B0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		8646347629F8B7BACD4518A6 /* Pods-RxSocialConnectExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSocialConnectExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSocialConnectExample/Pods-RxSocialConnectExample.release.xcconfig"; sourceTree = "<group>"; };
 		A2BBB0DB1CED0B260059387B /* RxSocialConnectExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSocialConnectExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2BBB0DE1CED0B260059387B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2BBB0E01CED0B260059387B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +81,7 @@
 		A2D443551CF61E7700BAA70A /* ProviderOAuth20.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderOAuth20.swift; sourceTree = "<group>"; };
 		A2D443561CF61E7700BAA70A /* RxSocialConnect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxSocialConnect.swift; sourceTree = "<group>"; };
 		A2D443581CF61E7700BAA70A /* RxSocialConnect+Moya.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RxSocialConnect+Moya.swift"; sourceTree = "<group>"; };
+		E9E6CFD701533FE127B9A024 /* Pods_RxSocialConnectExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSocialConnectExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECA5F3C520D2CE1D30ADD3C3 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -87,6 +91,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				925CA8CB81DBC5D4F8912829 /* Pods.framework in Frameworks */,
+				BDE107D9498924D528F1B643 /* Pods_RxSocialConnectExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				ECA5F3C520D2CE1D30ADD3C3 /* Pods.framework */,
+				E9E6CFD701533FE127B9A024 /* Pods_RxSocialConnectExample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -120,6 +126,8 @@
 			children = (
 				4367DD07B79D5A76EF0B64B0 /* Pods.debug.xcconfig */,
 				239EA7A0C8AAF89E643ECCA0 /* Pods.release.xcconfig */,
+				31BCC03877B4C8728E934323 /* Pods-RxSocialConnectExample.debug.xcconfig */,
+				8646347629F8B7BACD4518A6 /* Pods-RxSocialConnectExample.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -255,12 +263,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A2BBB1031CED0B270059387B /* Build configuration list for PBXNativeTarget "RxSocialConnectExample" */;
 			buildPhases = (
-				0C95422F42571CCE6A1F7E71 /* Check Pods Manifest.lock */,
+				0C95422F42571CCE6A1F7E71 /* 📦 Check Pods Manifest.lock */,
 				A2BBB0D71CED0B260059387B /* Sources */,
 				A2BBB0D81CED0B260059387B /* Frameworks */,
 				A2BBB0D91CED0B260059387B /* Resources */,
-				D2051080BF614B7504129926 /* Embed Pods Frameworks */,
-				A539D1BFB82CFB507B78B7E9 /* Copy Pods Resources */,
+				D2051080BF614B7504129926 /* 📦 Embed Pods Frameworks */,
+				A539D1BFB82CFB507B78B7E9 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -378,14 +386,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0C95422F42571CCE6A1F7E71 /* Check Pods Manifest.lock */ = {
+		0C95422F42571CCE6A1F7E71 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,34 +401,34 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		A539D1BFB82CFB507B78B7E9 /* Copy Pods Resources */ = {
+		A539D1BFB82CFB507B78B7E9 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxSocialConnectExample/Pods-RxSocialConnectExample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D2051080BF614B7504129926 /* Embed Pods Frameworks */ = {
+		D2051080BF614B7504129926 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxSocialConnectExample/Pods-RxSocialConnectExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -585,7 +593,7 @@
 		};
 		A2BBB1041CED0B270059387B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4367DD07B79D5A76EF0B64B0 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 31BCC03877B4C8728E934323 /* Pods-RxSocialConnectExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RxSocialConnectExample/Info.plist;
@@ -597,7 +605,7 @@
 		};
 		A2BBB1051CED0B270059387B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 239EA7A0C8AAF89E643ECCA0 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 8646347629F8B7BACD4518A6 /* Pods-RxSocialConnectExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RxSocialConnectExample/Info.plist;

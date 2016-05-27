@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		39BC09C73E4F7E4485AC19B9 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CD6A8673BDA525208DDA67C /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		5DF3B58D6390EA798864F9AE /* Pods_RxSocialConnectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CCCBD8E3A9216C9F8D4F59F /* Pods_RxSocialConnectTests.framework */; };
 		A2BBB0BC1CECFA960059387B /* RxSocialConnect.h in Headers */ = {isa = PBXBuildFile; fileRef = A2BBB0BB1CECFA960059387B /* RxSocialConnect.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A2BBB0C31CECFA960059387B /* RxSocialConnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2BBB0B81CECFA960059387B /* RxSocialConnect.framework */; };
 		A2BBB0C81CECFA960059387B /* RxSocialConnectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BBB0C71CECFA960059387B /* RxSocialConnectTests.swift */; };
@@ -24,7 +24,7 @@
 		A2D443841CF61E8000BAA70A /* ProviderOAuth20.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D443761CF61E8000BAA70A /* ProviderOAuth20.swift */; };
 		A2D443851CF61E8000BAA70A /* RxSocialConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D443771CF61E8000BAA70A /* RxSocialConnect.swift */; };
 		A2D443861CF61E8000BAA70A /* RxSocialConnect+Moya.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D443791CF61E8000BAA70A /* RxSocialConnect+Moya.swift */; };
-		AB8C170CD2A107821D5BFCE8 /* Pods_RxSocialConnectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73A93038DA575353AF9BDC20 /* Pods_RxSocialConnectTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		B23BA12FE0A36023141F5886 /* Pods_RxSocialConnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DAFA9FDB303E15D30364D23 /* Pods_RxSocialConnect.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,11 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		052F0E94CA7BCB14961597FC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		19A00DC41C672CDB29715F8A /* Pods-RxSocialConnectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSocialConnectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSocialConnectTests/Pods-RxSocialConnectTests.debug.xcconfig"; sourceTree = "<group>"; };
+		147161E6B01626FAFAB491CF /* Pods-RxSocialConnect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSocialConnect.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSocialConnect/Pods-RxSocialConnect.debug.xcconfig"; sourceTree = "<group>"; };
+		1DAFA9FDB303E15D30364D23 /* Pods_RxSocialConnect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSocialConnect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CCCBD8E3A9216C9F8D4F59F /* Pods_RxSocialConnectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSocialConnectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		38906C19976E914C8114A542 /* Pods-RxSocialConnectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSocialConnectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSocialConnectTests/Pods-RxSocialConnectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5CD6A8673BDA525208DDA67C /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		73A93038DA575353AF9BDC20 /* Pods_RxSocialConnectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSocialConnectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8FBFDBAE54039D0C02607343 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		72FB6D7DCAD2BF6FD4F007B8 /* Pods-RxSocialConnect.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSocialConnect.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSocialConnect/Pods-RxSocialConnect.release.xcconfig"; sourceTree = "<group>"; };
 		A2BBB0B81CECFA960059387B /* RxSocialConnect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSocialConnect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2BBB0BB1CECFA960059387B /* RxSocialConnect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RxSocialConnect.h; sourceTree = "<group>"; };
 		A2BBB0BD1CECFA960059387B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -62,7 +63,7 @@
 		A2D443761CF61E8000BAA70A /* ProviderOAuth20.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderOAuth20.swift; sourceTree = "<group>"; };
 		A2D443771CF61E8000BAA70A /* RxSocialConnect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxSocialConnect.swift; sourceTree = "<group>"; };
 		A2D443791CF61E8000BAA70A /* RxSocialConnect+Moya.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RxSocialConnect+Moya.swift"; sourceTree = "<group>"; };
-		D2BEEEE9EF81ED501DC96E20 /* Pods-RxSocialConnectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSocialConnectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSocialConnectTests/Pods-RxSocialConnectTests.release.xcconfig"; sourceTree = "<group>"; };
+		DEBE1492DD17583EF57ACBCC /* Pods-RxSocialConnectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSocialConnectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSocialConnectTests/Pods-RxSocialConnectTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39BC09C73E4F7E4485AC19B9 /* Pods.framework in Frameworks */,
+				B23BA12FE0A36023141F5886 /* Pods_RxSocialConnect.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,20 +80,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2BBB0C31CECFA960059387B /* RxSocialConnect.framework in Frameworks */,
-				AB8C170CD2A107821D5BFCE8 /* Pods_RxSocialConnectTests.framework in Frameworks */,
+				5DF3B58D6390EA798864F9AE /* Pods_RxSocialConnectTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		88358EE0A93336488D867002 /* Pods */ = {
+		2EF6AB85C5EA7355B0C12AF0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8FBFDBAE54039D0C02607343 /* Pods.debug.xcconfig */,
-				052F0E94CA7BCB14961597FC /* Pods.release.xcconfig */,
-				19A00DC41C672CDB29715F8A /* Pods-RxSocialConnectTests.debug.xcconfig */,
-				D2BEEEE9EF81ED501DC96E20 /* Pods-RxSocialConnectTests.release.xcconfig */,
+				147161E6B01626FAFAB491CF /* Pods-RxSocialConnect.debug.xcconfig */,
+				72FB6D7DCAD2BF6FD4F007B8 /* Pods-RxSocialConnect.release.xcconfig */,
+				38906C19976E914C8114A542 /* Pods-RxSocialConnectTests.debug.xcconfig */,
+				DEBE1492DD17583EF57ACBCC /* Pods-RxSocialConnectTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -101,7 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				5CD6A8673BDA525208DDA67C /* Pods.framework */,
-				73A93038DA575353AF9BDC20 /* Pods_RxSocialConnectTests.framework */,
+				1DAFA9FDB303E15D30364D23 /* Pods_RxSocialConnect.framework */,
+				2CCCBD8E3A9216C9F8D4F59F /* Pods_RxSocialConnectTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -112,8 +114,8 @@
 				A2BBB0BA1CECFA960059387B /* RxSocialConnect */,
 				A2BBB0C61CECFA960059387B /* RxSocialConnectTests */,
 				A2BBB0B91CECFA960059387B /* Products */,
-				88358EE0A93336488D867002 /* Pods */,
 				931374ECD5EF98A31D95FE4A /* Frameworks */,
+				2EF6AB85C5EA7355B0C12AF0 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -232,12 +234,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A2BBB0CC1CECFA960059387B /* Build configuration list for PBXNativeTarget "RxSocialConnect" */;
 			buildPhases = (
-				DE973B930F9B01B060981BDA /* Check Pods Manifest.lock */,
+				DC5E7EC026C0B3AFDEAFC159 /* 📦 Check Pods Manifest.lock */,
 				A2BBB0B31CECFA960059387B /* Sources */,
 				A2BBB0B41CECFA960059387B /* Frameworks */,
 				A2BBB0B51CECFA960059387B /* Headers */,
 				A2BBB0B61CECFA960059387B /* Resources */,
-				67EE7B14B9B1A88FA59B33E6 /* Copy Pods Resources */,
+				4F8E7351B26002175A753CB0 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -252,12 +254,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A2BBB0CF1CECFA960059387B /* Build configuration list for PBXNativeTarget "RxSocialConnectTests" */;
 			buildPhases = (
-				B80595F492A7A5233E7020EA /* Check Pods Manifest.lock */,
+				1347EF2276817A987535B18D /* 📦 Check Pods Manifest.lock */,
 				A2BBB0BE1CECFA960059387B /* Sources */,
 				A2BBB0BF1CECFA960059387B /* Frameworks */,
 				A2BBB0C01CECFA960059387B /* Resources */,
-				30B2CF43F1075650D825A0CB /* Embed Pods Frameworks */,
-				429B14AD6830FA4346B30520 /* Copy Pods Resources */,
+				8780E977750C5E61C4868220 /* 📦 Embed Pods Frameworks */,
+				841A6FCB85B5708BE9C4688C /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -323,59 +325,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		30B2CF43F1075650D825A0CB /* Embed Pods Frameworks */ = {
+		1347EF2276817A987535B18D /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxSocialConnectTests/Pods-RxSocialConnectTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		429B14AD6830FA4346B30520 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxSocialConnectTests/Pods-RxSocialConnectTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		67EE7B14B9B1A88FA59B33E6 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B80595F492A7A5233E7020EA /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,14 +340,59 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		DE973B930F9B01B060981BDA /* Check Pods Manifest.lock */ = {
+		4F8E7351B26002175A753CB0 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxSocialConnect/Pods-RxSocialConnect-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		841A6FCB85B5708BE9C4688C /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxSocialConnectTests/Pods-RxSocialConnectTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8780E977750C5E61C4868220 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxSocialConnectTests/Pods-RxSocialConnectTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC5E7EC026C0B3AFDEAFC159 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -531,7 +533,7 @@
 		};
 		A2BBB0CD1CECFA960059387B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8FBFDBAE54039D0C02607343 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 147161E6B01626FAFAB491CF /* Pods-RxSocialConnect.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
@@ -550,7 +552,7 @@
 		};
 		A2BBB0CE1CECFA960059387B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 052F0E94CA7BCB14961597FC /* Pods.release.xcconfig */;
+			baseConfigurationReference = 72FB6D7DCAD2BF6FD4F007B8 /* Pods-RxSocialConnect.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
@@ -568,7 +570,7 @@
 		};
 		A2BBB0D01CECFA960059387B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 19A00DC41C672CDB29715F8A /* Pods-RxSocialConnectTests.debug.xcconfig */;
+			baseConfigurationReference = 38906C19976E914C8114A542 /* Pods-RxSocialConnectTests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = RxSocialConnectTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -579,7 +581,7 @@
 		};
 		A2BBB0D11CECFA960059387B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D2BEEEE9EF81ED501DC96E20 /* Pods-RxSocialConnectTests.release.xcconfig */;
+			baseConfigurationReference = DEBE1492DD17583EF57ACBCC /* Pods-RxSocialConnectTests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = RxSocialConnectTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

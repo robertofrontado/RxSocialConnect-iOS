@@ -24,12 +24,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-RxSocialConnectTests.xcscheme</key>
+		<key>Pods-RxSocialConnect.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods.xcscheme</key>
+		<key>Pods-RxSocialConnectTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -57,52 +57,52 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>303FD435DB72E40C7773588BE402056B</key>
+		<key>432ECC54282C84882B482CCB4CF227FC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>308BA63ED2FE24E5595FF8959D7E5A4F</key>
+		<key>45935B91DF0442390E2CA6DEEF68AE99</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3AA1551F8166D744BD9AC718595860F1</key>
+		<key>93DDB4D07205258016E6779F2667E665</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>71B3766C8381FB87E6C4ADBCD34D9709</key>
+		<key>99379131731F29B13CDBACB834C9F286</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>88992CC9448596349781E9329EA9B865</key>
+		<key>9F131BBD560982CCAF4B901716A01FFC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>93C2E5A1689591017E36F6676BEDA7A8</key>
+		<key>A0933FC1307AD48F89C9FB7CEA3C29C5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AF6218C8736121B82C0DA0FDA9BD14D7</key>
+		<key>BE02FE1B2EEB0C9F2A7CC1FF0CCBD93C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B4F092062F08AA60CFEA256B4C19BEE2</key>
+		<key>C5DB5104FED3C10F78978AFC810982B9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C791695DBD2EF229448FC64BF3CAC5B1</key>
+		<key>E30314DF7BBEDAB9606C364D95491E10</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D02E08439589872996252F4061652195</key>
+		<key>E5678FC69B99077E1972D149186B2285</key>
 		<dict>
 			<key>primary</key>
 			<true/>

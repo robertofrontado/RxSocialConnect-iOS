@@ -1,16 +1,18 @@
 platform :ios, '8.0'
 use_frameworks!
 
-pod 'OAuthSwift', '~> 0.5.0'
-pod 'RxSwift', '~> 2.0.0'
-pod 'RxBlocking', '~> 2.0.0'
-pod 'Alamofire', '~> 3.1.0'
+target 'RxSocialConnect' do
+    pod 'OAuthSwift', '~> 0.5.0'
+    pod 'RxSwift', '~> 2.0'
+    pod 'RxBlocking', '~> 2.0.0'
+    
+    pod 'Alamofire', '~> 3.1.0'
+    
+    pod 'Moya', '~> 6.0.0'
+    pod 'Moya/RxSwift', '~> 6.0.0'
+end
 
-pod 'Result', '~> 1.0.0'
-pod 'Moya'
-pod 'Moya/RxSwift'
-
-target 'RxSocialConnectTests', :exclusive => true do
+target 'RxSocialConnectTests' do
     pod 'Nimble', '~> 3.0.0'
     pod 'RxTests', '~> 2.0'
 end
