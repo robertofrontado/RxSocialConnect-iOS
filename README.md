@@ -124,7 +124,7 @@ let endpointClosure = { (target: Target) -> Endpoint<Target> in
  - https://github.com/robertofrontado
  - https://twitter.com/robertofrontado
 
-# Another author's libraris using RxSwift:
+# Another author's libraries using RxSwift:
 
  - [BaseApp-iOS](https://github.com/FuckBoilerplate/base_app_ios): Base skeleton structure to start every new iOS project
  - [OkDataSources](https://github.com/FuckBoilerplate/OkDataSources): Wrappers for iOS TableView and CollectionView DataSources to simplify its api at a minimum. Also it has a cool PagerView and SlidingTabs!
