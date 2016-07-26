@@ -22,7 +22,7 @@ class TokenCache {
     }
     
     func save<T: OAuthSwiftCredential>(key: String, data: T) {
-        memory.updateValue(data, forKey: key)
+        memory.updateValue(Observable.just(data), forKey: key)
         disk.save(key, data: data)
     }
     
