@@ -52,7 +52,7 @@ public enum Target: TargetType {
     public var parameterEncoding: Moya.ParameterEncoding {
         switch(self) {
         case .Me:
-            return .JSON
+            return .URL
         }
     }
     
