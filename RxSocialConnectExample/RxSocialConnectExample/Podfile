@@ -3,11 +3,11 @@ use_frameworks!
 
 target 'RxSocialConnectExample' do
     pod 'OAuthSwift', '~> 0.5.0'
-    pod 'RxSwift', '~> 2.0'
-    pod 'RxBlocking', '~> 2.0.0'
+    pod 'RxSwift', '~> 2.5.0'
+    pod 'RxBlocking', '~> 2.5.0'
     
-    pod 'Alamofire', '~> 3.1.0'
+    pod 'Alamofire', '~> 3.0'
     
-    pod 'Moya', '~> 6.0.0'
-    pod 'Moya/RxSwift', '~> 6.0.0'
+    pod 'Moya', '~> 6.5.0'
+    pod 'Moya/RxSwift', '~> 6.5.0'
 end

@@ -78,7 +78,7 @@ class CustomWebViewController: UIViewController, UIWebViewDelegate {
     }
     
     private func setUpNavigationBar() {
-        let backButton = UIBarButtonItem(title: "Back", style: .Plain, target: self, action: "backButtonPressed:")
+        let backButton = UIBarButtonItem(title: "Back", style: .Plain, target: self, action: #selector(CustomWebViewController.backButtonPressed(_:)))
         navigationItem.leftBarButtonItem = backButton
         self.title = url.host!
     }
