@@ -13,9 +13,9 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
   s.requires_arc = true
 
-  s.dependency 'RxSwift', '~> 2.0.0'
+  s.dependency 'RxSwift', '~> 2.5.0'
   s.dependency 'OAuthSwift', '~> 0.5.0'
-  s.dependency 'RxBlocking', '~> 2.0.0'
+  s.dependency 'RxBlocking', '~> 2.5.0'
   
   s.default_subspec = "Core"
 
@@ -26,9 +26,9 @@ Pod::Spec.new do |s|
   s.subspec "Moya" do |ss|
     ss.source_files = 'Sources/Moya/**/*'
     ss.dependency 'RxSocialConnect/Core'
-    ss.dependency 'Alamofire', '~> 3.1.0'
-    ss.dependency 'Moya', '~> 6.0.0'
-    ss.dependency 'Moya/RxSwift', '~> 6.0.0'
+    ss.dependency 'Alamofire', '~> 3.0'
+    ss.dependency 'Moya', '~> 6.5.0'
+    ss.dependency 'Moya/RxSwift', '~> 6.5.0'
   end
 
 end
