@@ -10,17 +10,17 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/FuckBoilerplate/RxSocialConnect-iOS.git", :tag => s.version.to_s }
   s.social_media_url   = "https://github.com/FuckBoilerplate"
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
   s.requires_arc = true
 
-  s.dependency 'RxSwift', '~> 3.0'
-  s.dependency 'OAuthSwift', '~> 1.0.0'
-  s.dependency 'RxBlocking', '~> 3.0'
   
   s.default_subspec = "Core"
 
   s.subspec "Core" do |ss|
     ss.source_files = 'Sources/Core/**/*'
+    ss.dependency 'OAuthSwift', '~> 1.0.0'
+    ss.dependency 'RxSwift', '~> 3.0'
+    ss.dependency 'RxBlocking', '~> 3.0'
   end
 
   s.subspec "Moya" do |ss|
