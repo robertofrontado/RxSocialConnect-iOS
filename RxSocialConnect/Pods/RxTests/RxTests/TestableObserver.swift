@@ -16,12 +16,12 @@ public class TestableObserver<ElementType>
     : ObserverType {
     public typealias Element = ElementType
     
-    private let _scheduler: TestScheduler
+    fileprivate let _scheduler: TestScheduler
 
     /**
     Recorded events.
     */
-    public private(set) var events = [Recorded<Event<Element>>]()
+    public fileprivate(set) var events = [Recorded<Event<Element>>]()
     
     init(scheduler: TestScheduler) {
         _scheduler = scheduler
@@ -32,7 +32,7 @@ public class TestableObserver<ElementType>
 
     - parameter event: Event that occured.
     */
-    public func on(event: Event<Element>) {
+    public func on(_ event: Event<Element>) {
         events.append(Recorded(time: _scheduler.clock, event: event))
     }
 }

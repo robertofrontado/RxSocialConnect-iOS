@@ -11,22 +11,22 @@ import OAuthSwift
 
 class TokenCache {
 
-    private let disk: Disk
-    private var memory: [String: AnyObject]
+    fileprivate let disk: Disk
+    fileprivate var memory: [String: AnyObject]
     
     static let INSTANCE = TokenCache()
     
-    private init() {
+    fileprivate init() {
         disk = Disk()
         memory = [String: AnyObject]()
     }
     
-    func save<T: OAuthSwiftCredential>(key: String, data: T) {
+    func save<T: OAuthSwiftCredential>(_ key: String, data: T) {
         memory.updateValue(Observable.just(data), forKey: key)
         disk.save(key, data: data)
     }
     
-    func get<T: OAuthSwiftCredential>(keyToken: String, classToken: T.Type) -> Observable<T>? {
+    func get<T: OAuthSwiftCredential>(_ keyToken: String, classToken: T.Type) -> Observable<T>? {
         var token = memory[keyToken]
         if token == nil {
             token = disk.get(keyToken, classToken: classToken)
@@ -37,8 +37,8 @@ class TokenCache {
         return token as? Observable<T>
     }
     
-    func evict(key: String) {
-        memory.removeValueForKey(key)
+    func evict(_ key: String) {
+        memory.removeValue(forKey: key)
         disk.evict(key)
     }
     

@@ -1,13 +1,14 @@
-platform :ios, '8.0'
+platform :ios, '9.0'
 use_frameworks!
 
 target 'RxSocialConnectExample' do
-    pod 'OAuthSwift', '~> 0.5.0'
-    pod 'RxSwift', '~> 2.5.0'
-    pod 'RxBlocking', '~> 2.5.0'
+    pod 'OAuthSwift', '~> 1.0.0'
     
-    pod 'Alamofire', '~> 3.0'
+    pod 'RxSwift', '~> 3.0'
+    pod 'RxBlocking', '~> 3.0'
     
-    pod 'Moya', '~> 6.5.0'
-    pod 'Moya/RxSwift', '~> 6.5.0'
+    pod 'Alamofire', '~> 4.0'
+    
+    pod 'Moya', '~> 8.0.0-beta.2'
+    pod 'Moya/RxSwift'
 end

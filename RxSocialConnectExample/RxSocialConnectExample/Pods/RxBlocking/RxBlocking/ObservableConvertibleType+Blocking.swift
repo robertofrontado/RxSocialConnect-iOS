@@ -12,13 +12,11 @@ import RxSwift
 #endif
 
 extension ObservableConvertibleType {
-    /**
-    Converts an Observable into a `BlockingObservable` (an Observable with blocking operators).
-
-    - returns: `BlockingObservable` version of `self`
-    */
-    @warn_unused_result(message="http://git.io/rxs.uo")
-    public func toBlocking() -> BlockingObservable<E> {
-        return BlockingObservable(source: self.asObservable())
+    /// Converts an Observable into a `BlockingObservable` (an Observable with blocking operators).
+    ///
+    /// - parameter timeout: Maximal time interval BlockingObservable can block without throwing `RxError.timeout`.
+    /// - returns: `BlockingObservable` version of `self`
+    public func toBlocking(timeout: RxTimeInterval? = nil) -> BlockingObservable<E> {
+        return BlockingObservable(timeout: timeout, source: self.asObservable())
     }
 }

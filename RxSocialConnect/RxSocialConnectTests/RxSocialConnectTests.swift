@@ -33,9 +33,9 @@ class RxSocialConnectTests: XCTestCase {
     }
     
     // MARK: - Private methods
-    private func createCredential(expiresOnSeconds: Int) -> OAuthSwiftCredential{
+    fileprivate func createCredential(_ expiresOnSeconds: Int) -> OAuthSwiftCredential{
         let credential = OAuthSwiftCredential(consumer_key: "", consumer_secret: "")
-        credential.oauth_token_expires_at = NSDate(timeInterval: Double(expiresOnSeconds), sinceDate: NSDate())
+        credential.oauth_token_expires_at = Date(timeInterval: Double(expiresOnSeconds), since: Date())
         return credential
     }
     

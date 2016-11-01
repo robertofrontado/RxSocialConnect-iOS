@@ -14,19 +14,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
-    
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
         return true
     }
     
-    func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
-        applicationHandleOpenURL(url)
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        applicationHandleOpenURL(url: url)
         return true
     }
     
-    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
-        applicationHandleOpenURL(url)
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        applicationHandleOpenURL(url: url)
         return true
     }
     
@@ -34,12 +32,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate {
     
-    func applicationHandleOpenURL(url: NSURL) {
+    func applicationHandleOpenURL(url: URL) {
         if (url.host == "oauth-callback") {
-            OAuthSwift.handleOpenURL(url)
+            OAuthSwift.handle(url: url)
         } else {
             // Google provider is the only one wuth your.bundle.id url schema.
-            OAuthSwift.handleOpenURL(url)
+            OAuthSwift.handle(url: url)
         }
     }
 }

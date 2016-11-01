@@ -16,13 +16,13 @@ public protocol ProviderOAuth1: ProviderOAuth {
     
     var consumerKey: String {get set}
     var consumerSecret: String {get set}
-    var callbackUrl: NSURL {get set}
+    var callbackUrl: URL {get set}
     
     var requestTokenUrl: String {get set}
     var authorizeUrl: String {get set}
     var accessTokenUrl: String {get set}
     
-    init(consumerKey: String, consumerSecret: String, callbackUrl: NSURL)
+    init(consumerKey: String, consumerSecret: String, callbackUrl: URL)
 }
 
 public extension ProviderOAuth1 {

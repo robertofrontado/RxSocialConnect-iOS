@@ -9,20 +9,20 @@
 import OAuthSwift
 import RxSwift
 
-public class Disk {
+open class Disk {
     
-    private let cacheDirectory: String
-    private let NAME_DIR = "RxSocialConnect"
+    fileprivate let cacheDirectory: String
+    fileprivate let NAME_DIR = "RxSocialConnect"
     
     public init() {
-        let fileManager = NSFileManager.defaultManager()
-        let paths = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
-        let documentsDirectory: AnyObject = paths[0]
-        let dirPath = documentsDirectory.stringByAppendingPathComponent(NAME_DIR)
+        let fileManager = FileManager.default
+        let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
+        let documentsDirectory: AnyObject = paths[0] as AnyObject
+        let dirPath: String = documentsDirectory.appendingPathComponent(NAME_DIR)
         
-        if !fileManager.fileExistsAtPath(dirPath) {
+        if !fileManager.fileExists(atPath: dirPath) {
             do {
-                try fileManager.createDirectoryAtPath(dirPath, withIntermediateDirectories: false, attributes: nil)
+                try fileManager.createDirectory(atPath: dirPath, withIntermediateDirectories: false, attributes: nil)
             } catch let error as NSError {
                 print(error.localizedDescription)
             }
@@ -32,11 +32,11 @@ public class Disk {
         
     }
     
-    public func save<T: OAuthSwiftCredential>(key: String, data: T) -> Bool {
+    open func save<T: OAuthSwiftCredential>(_ key: String, data: T) -> Bool {
         return NSKeyedArchiver.archiveRootObject(data, toFile: cacheDirectory+key)
     }
     
-    public func get<T: OAuthSwiftCredential>(keyToken: String, classToken: T.Type) -> Observable<T>? {
+    open func get<T: OAuthSwiftCredential>(_ keyToken: String, classToken: T.Type) -> Observable<T>? {
         if let response = retrieve(keyToken, clazz: classToken) {
             if !response.isTokenExpired() {
                 return Observable.just(response)
@@ -45,22 +45,22 @@ public class Disk {
         return nil
     }
     
-    private func retrieve<T: OAuthSwiftCredential>(key: String, clazz: T.Type) -> T? {
-        return NSKeyedUnarchiver.unarchiveObjectWithFile(cacheDirectory+key) as? T
+    fileprivate func retrieve<T: OAuthSwiftCredential>(_ key: String, clazz: T.Type) -> T? {
+        return NSKeyedUnarchiver.unarchiveObject(withFile: cacheDirectory+key) as? T
     }
     
-    public func evict(key: String) {
+    open func evict(_ key: String) {
         do {
-            try NSFileManager.defaultManager().removeItemAtPath(cacheDirectory+key)
+            try FileManager.default.removeItem(atPath: cacheDirectory+key)
             print("Deleted data for key " + key)
         } catch {
             print("Failed to delete data for key " + key)
         }
     }
     
-    public func evictAll() {
+    open func evictAll() {
         do {
-            try NSFileManager.defaultManager().removeItemAtPath(cacheDirectory)
+            try FileManager.default.removeItem(atPath: cacheDirectory)
             print("Deleted all stored data")
         } catch {
             print("Failed to delete all stored data")
