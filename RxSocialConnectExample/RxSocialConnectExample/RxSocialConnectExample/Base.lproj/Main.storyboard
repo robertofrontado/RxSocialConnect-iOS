@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="DnI-Qo-Dq5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="DnI-Qo-Dq5">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -13,95 +14,83 @@
                         <viewControllerLayoutGuide type="bottom" id="tcg-5j-E8v"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hPp-tL-Fcl">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNA-j4-vNo">
-                                <rect key="frame" x="20" y="70" width="48" height="30"/>
                                 <state key="normal" title="Twitter"/>
                                 <connections>
-                                    <action selector="twitterButtonPressed:" destination="DnI-Qo-Dq5" eventType="touchUpInside" id="CJT-T7-fYr"/>
+                                    <action selector="twitterButtonPressedWithSender:" destination="DnI-Qo-Dq5" eventType="touchUpInside" id="fUy-lm-veN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CzG-8a-Crg">
-                                <rect key="frame" x="20" y="120" width="67" height="30"/>
                                 <state key="normal" title="Facebook"/>
                                 <connections>
-                                    <action selector="facebookButtonPressed:" destination="DnI-Qo-Dq5" eventType="touchUpInside" id="pWH-Vl-cGb"/>
+                                    <action selector="facebookButtonPressedWithSender:" destination="DnI-Qo-Dq5" eventType="touchUpInside" id="fvP-Z2-4hq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IuG-r1-jmn">
-                                <rect key="frame" x="20" y="170" width="69" height="30"/>
                                 <state key="normal" title="Instagram"/>
                                 <connections>
-                                    <action selector="instagramButtonPressed:" destination="DnI-Qo-Dq5" eventType="touchUpInside" id="DLr-dj-buu"/>
+                                    <action selector="instagramButtonPressedWithSender:" destination="DnI-Qo-Dq5" eventType="touchUpInside" id="0cd-bW-YFD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpU-pE-yc6">
-                                <rect key="frame" x="20" y="220" width="50" height="30"/>
                                 <state key="normal" title="Google"/>
                                 <connections>
-                                    <action selector="googleButtonPressed:" destination="DnI-Qo-Dq5" eventType="touchUpInside" id="WuF-gB-mLJ"/>
+                                    <action selector="googleButtonPressedWithSender:" destination="DnI-Qo-Dq5" eventType="touchUpInside" id="CCF-17-OqT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xnT-nH-E6p">
-                                <rect key="frame" x="20" y="270" width="58" height="30"/>
                                 <state key="normal" title="Linkedin"/>
                                 <connections>
-                                    <action selector="linkedinButtonPressed:" destination="DnI-Qo-Dq5" eventType="touchUpInside" id="muN-Qn-9sZ"/>
+                                    <action selector="linkedinButtonPressedWithSender:" destination="DnI-Qo-Dq5" eventType="touchUpInside" id="iVx-Nm-3mN"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RxSocialConnect Examples" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sUZ-GS-vvS">
-                                <rect key="frame" x="196" y="28" width="208" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HTN-t6-u5G">
-                                <rect key="frame" x="490" y="70" width="90" height="30"/>
                                 <state key="normal" title="Close Twitter"/>
                                 <connections>
-                                    <action selector="disconnectTwitterButtonPressed:" destination="DnI-Qo-Dq5" eventType="touchUpInside" id="xwy-BG-9Vv"/>
+                                    <action selector="disconnectTwitterButtonPressedWithSender:" destination="DnI-Qo-Dq5" eventType="touchUpInside" id="hO7-pB-uxG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uIE-yD-bcE">
-                                <rect key="frame" x="470" y="120" width="110" height="30"/>
                                 <state key="normal" title="Close Facebook"/>
                                 <connections>
-                                    <action selector="disconnectFacebookButtonPressed:" destination="DnI-Qo-Dq5" eventType="touchUpInside" id="e1I-h1-lez"/>
+                                    <action selector="disconnectFacebookButtonPressedWithSender:" destination="DnI-Qo-Dq5" eventType="touchUpInside" id="AJk-JS-VVJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vuk-9c-xko">
-                                <rect key="frame" x="469" y="170" width="111" height="30"/>
                                 <state key="normal" title="Close Instagram"/>
                                 <connections>
-                                    <action selector="disconnectInstagramButtonPressed:" destination="DnI-Qo-Dq5" eventType="touchUpInside" id="582-tH-FDc"/>
+                                    <action selector="disconnectInstagramButtonPressedWithSender:" destination="DnI-Qo-Dq5" eventType="touchUpInside" id="TfO-ke-dQT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xy7-FD-QDq">
-                                <rect key="frame" x="488" y="220" width="92" height="30"/>
                                 <state key="normal" title="Close Google"/>
                                 <connections>
-                                    <action selector="disconnectGoogleButtonPressed:" destination="DnI-Qo-Dq5" eventType="touchUpInside" id="EzR-ne-igm"/>
+                                    <action selector="disconnectGoogleButtonPressedWithSender:" destination="DnI-Qo-Dq5" eventType="touchUpInside" id="GCo-q0-HR4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MbN-rT-sUs">
-                                <rect key="frame" x="480" y="270" width="100" height="30"/>
                                 <state key="normal" title="Close Linkedin"/>
                                 <connections>
-                                    <action selector="disconnectLinkedinButtonPressed:" destination="DnI-Qo-Dq5" eventType="touchUpInside" id="Afr-Es-nhQ"/>
+                                    <action selector="disconnectLinkedinButtonPressedWithSender:" destination="DnI-Qo-Dq5" eventType="touchUpInside" id="aee-w2-g89"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZ2-af-yip">
-                                <rect key="frame" x="522" y="320" width="58" height="30"/>
                                 <accessibility key="accessibilityConfiguration" identifier="Close all"/>
                                 <state key="normal" title="Close all"/>
                                 <connections>
-                                    <action selector="disconnectAllButtonPressed:" destination="DnI-Qo-Dq5" eventType="touchUpInside" id="qOd-KP-l0K"/>
+                                    <action selector="disconnectAllButtonPressedWithSender:" destination="DnI-Qo-Dq5" eventType="touchUpInside" id="Xcv-fo-9mV"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="xy7-FD-QDq" firstAttribute="top" secondItem="Vuk-9c-xko" secondAttribute="bottom" constant="20" id="5av-xm-X1x"/>
                             <constraint firstItem="sUZ-GS-vvS" firstAttribute="centerX" secondItem="hPp-tL-Fcl" secondAttribute="centerX" id="6il-Jh-xS4"/>

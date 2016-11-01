@@ -8,18 +8,18 @@
 
 import OAuthSwift
 
-public class LinkedinApi20: ProviderOAuth20 {
+open class LinkedinApi20: ProviderOAuth20 {
     
-    public var consumerKey: String
-    public var consumerSecret: String
-    public var callbackUrl: NSURL
-    public var scope: String
+    open var consumerKey: String
+    open var consumerSecret: String
+    open var callbackUrl: URL
+    open var scope: String
     
-    public var authorizeUrl: String = "https://www.linkedin.com/uas/oauth2/authorization"
-    public var accessTokenUrl: String = "https://www.linkedin.com/uas/oauth2/accessToken"
-    public var responseType: String = "code"
+    open var authorizeUrl: String = "https://www.linkedin.com/uas/oauth2/authorization"
+    open var accessTokenUrl: String = "https://www.linkedin.com/uas/oauth2/accessToken"
+    open var responseType: String = "code"
     
-    required public init(consumerKey: String, consumerSecret: String, callbackUrl: NSURL, scope: String) {
+    required public init(consumerKey: String, consumerSecret: String, callbackUrl: URL, scope: String) {
         self.consumerKey = consumerKey
         self.consumerSecret = consumerSecret
         self.callbackUrl = callbackUrl

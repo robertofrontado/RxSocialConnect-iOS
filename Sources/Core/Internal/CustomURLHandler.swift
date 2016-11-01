@@ -10,66 +10,67 @@ import UIKit
 import WebKit
 import OAuthSwift
 
-public class CustomURLHandler: NSObject, OAuthSwiftURLHandlerType {
+open class CustomURLHandler: NSObject, OAuthSwiftURLHandlerType {
     // Same as OAuthSwift.CallbackNotification.notificationName
     struct CallbackNotification {
         static let notificationName = "OAuthSwiftCallbackNotificationName"
         static let optionsURLKey = "OAuthSwiftCallbackNotificationOptionsURLKey"
     }
     
-    public let viewController: UIViewController
-    public let callbackUrl: NSURL
-    private var controller: UINavigationController!
+    open let viewController: UIViewController
+    open let callbackUrl: URL
+    fileprivate var controller: UINavigationController!
     var observers = [String: AnyObject]()
     
     // configure
-    public var animated: Bool = true
+    open var animated: Bool = true
     
     // delegates
-    public var presentCompletion: (() -> Void)?
-    public var dismissCompletion: (() -> Void)?
+    open var presentCompletion: (() -> Void)?
+    open var dismissCompletion: (() -> Void)?
     
     // init
-    public init(viewController: UIViewController, callbackUrl: NSURL) {
+    public init(viewController: UIViewController, callbackUrl: URL) {
         self.viewController = viewController
         self.callbackUrl = callbackUrl
     }
     
-    @objc public func handle(url: NSURL) {
+    @objc open func handle(_ url: URL) {
         
         let customWebVC = CustomWebViewController()
         customWebVC.url = url
         customWebVC.callbackUrl = callbackUrl
         controller = UINavigationController(rootViewController: customWebVC)
         
-        let key = NSUUID().UUIDString
+        let key = UUID().uuidString
         
-        observers[key] = NSNotificationCenter.defaultCenter().addObserverForName(
-            CallbackNotification.notificationName,
+        observers[key] = NotificationCenter.default.addObserver(
+            forName: NSNotification.Name(rawValue: CallbackNotification.notificationName),
             object: nil,
-            queue: NSOperationQueue.mainQueue(),
-            usingBlock:{ [unowned self]
+            queue: OperationQueue.main,
+            using:{
                 notification in
+                
                 if let observer = self.observers[key] {
-                    NSNotificationCenter.defaultCenter().removeObserver(observer)
-                    self.observers.removeValueForKey(key)
+                    NotificationCenter.default.removeObserver(observer)
+                    self.observers.removeValue(forKey: key)
                 }
                 
-                if !self.controller.isBeingDismissed() {
-                    self.controller.dismissViewControllerAnimated(self.animated, completion: self.dismissCompletion)
+                if !self.controller.isBeingDismissed {
+                    self.controller.dismiss(animated: self.animated, completion: self.dismissCompletion)
                 }
             }
         )
         
-        viewController.presentViewController(self.controller, animated: self.animated, completion: self.presentCompletion)
+        viewController.present(self.controller, animated: self.animated, completion: self.presentCompletion)
     }
     
 }
 
 class CustomWebViewController: UIViewController, UIWebViewDelegate {
 
-    var url: NSURL!
-    var callbackUrl: NSURL!
+    var url: URL!
+    var callbackUrl: URL!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,37 +78,37 @@ class CustomWebViewController: UIViewController, UIWebViewDelegate {
         setUpWebView()
     }
     
-    private func setUpNavigationBar() {
-        let backButton = UIBarButtonItem(title: "Back", style: .Plain, target: self, action: #selector(CustomWebViewController.backButtonPressed(_:)))
+    fileprivate func setUpNavigationBar() {
+        let backButton = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(CustomWebViewController.backButtonPressed(_:)))
         navigationItem.leftBarButtonItem = backButton
         self.title = url.host!
     }
     
-    private func setUpWebView() {
-        let webView = UIWebView(frame: UIScreen.mainScreen().bounds)
+    fileprivate func setUpWebView() {
+        let webView = UIWebView(frame: UIScreen.main.bounds)
         webView.scalesPageToFit = true
         webView.delegate = self
         view.addSubview(webView)
         
-        let cookieJar = NSHTTPCookieStorage.sharedHTTPCookieStorage()
+        let cookieJar = HTTPCookieStorage.shared
         
         for cookie in cookieJar.cookies! {
             cookieJar.deleteCookie(cookie)
         }
         
-        webView.loadRequest(NSURLRequest(URL:url))
+        webView.loadRequest(URLRequest(url:url))
     }
     
     // MARK: - Actions
-    @IBAction func backButtonPressed(sender: UIButton) {
-        navigationController?.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func backButtonPressed(_ sender: UIButton) {
+        navigationController?.dismiss(animated: true, completion: nil)
     }
     
     // MARK: - UIWebViewDelegate
-    func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
-        if let url = request.URL where url.absoluteString.hasPrefix(callbackUrl.absoluteString) {
-            if let nvc = navigationController where !nvc.isBeingDismissed() {
-                nvc.dismissViewControllerAnimated(true, completion: { OAuthSwift.handleOpenURL(url) })
+    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+        if let url = request.url , url.absoluteString.hasPrefix(callbackUrl.absoluteString) {
+            if let nvc = navigationController , !nvc.isBeingDismissed {
+                nvc.dismiss(animated: true, completion: { OAuthSwift.handle(url: url) })
             }
         }
         return true

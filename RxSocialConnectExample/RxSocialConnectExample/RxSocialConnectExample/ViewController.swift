@@ -14,18 +14,18 @@ class ViewController: UIViewController {
     let facebookApiMoya = FacebookApiMoya()
     
     // MARK: - Private methods
-    private func showResponse(credential: OAuthSwiftCredential) {
-        showAlert("Token: " + credential.oauth_token)
+    private func showResponse(_ credential: OAuthSwiftCredential) {
+        showAlert("Token: " + credential.oauthToken)
     }
     
-    private func showError(error: NSError) {
+    private func showError(_ error: NSError) {
         showAlert(error.domain)
     }
     
-    private func showAlert(message: String) {
-        let alertVC = UIAlertController(title: message, message: nil, preferredStyle: UIAlertControllerStyle.Alert)
-        alertVC.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-        presentViewController(alertVC, animated: true, completion: nil)
+    private func showAlert(_ message: String) {
+        let alertVC = UIAlertController(title: message, message: nil, preferredStyle: UIAlertControllerStyle.alert)
+        alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alertVC, animated: true, completion: nil)
     }
     
     // MARK: - Actions
@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         let twitterApi = TwitterApi(
             consumerKey: "vAhn2cfWhhtpe0ajlr1w",
             consumerSecret: "JdN0FArC43ZV8Tk9AIG52hfmbU5NE1SUwmnNBzg",
-            callbackUrl: NSURL(string: "oauth-swift://oauth-callback/twitter")!
+            callbackUrl: URL(string: "oauth-swift://oauth-callback/twitter")!
         )
         
         RxSocialConnect.with(self, providerOAuth1: twitterApi)
@@ -51,7 +51,7 @@ class ViewController: UIViewController {
         let facebookApi20 = FacebookApi20(
             consumerKey: "452930454916873",
             consumerSecret: "4a643dd4c4537f01411ab7bb44736f1f",
-            callbackUrl: NSURL(string: "http://victoralbertos.com/")!,
+            callbackUrl: URL(string: "http://victoralbertos.com/")!,
             scope: "public_profile"
         )
         
@@ -61,7 +61,7 @@ class ViewController: UIViewController {
                 // Testing Facebook
                 self.facebookApiMoya.getMe()
                     .subscribe(onNext: { (response) -> Void in
-                        print(NSString(data: response.data, encoding: NSUTF8StringEncoding))
+                        print(String(data: response.data, encoding: String.Encoding.utf8))
                         }, onError: { self.showError($0 as NSError) })
                 },
                 onError: { self.showError($0 as NSError) })
@@ -76,7 +76,7 @@ class ViewController: UIViewController {
         let instagramApi20 = InstagramApi20(
             consumerKey: "d5d68c4d1d7241d2afefece62157af64",
             consumerSecret: "768dfdf88bb1479f9ae706da694c3576",
-            callbackUrl: NSURL(string: "oauth-swift://oauth-callback/instagram")!,
+            callbackUrl: URL(string: "oauth-swift://oauth-callback/instagram")!,
             scope: "basic"
         )
         
@@ -94,7 +94,7 @@ class ViewController: UIViewController {
         let googleApi20 = GoogleApi20(
             consumerKey: "112202070176-3b8b2s85rtt39k6ga5f2001p937i57fq.apps.googleusercontent.com",
             consumerSecret: "-zkjJwn3j_2JOyPSDHExJ6cO",
-            callbackUrl: NSURL(string: "http://victoralbertos.com/")!,
+            callbackUrl: URL(string: "http://victoralbertos.com/")!,
             scope: "profile"
         )
         
@@ -112,7 +112,7 @@ class ViewController: UIViewController {
         let linkedinApi20 = LinkedinApi20(
             consumerKey: "77u9plrpoq0g6t",
             consumerSecret: "VlH229TNkzJysxbq",
-            callbackUrl: NSURL(string: "http://victoralbertos.com")!,
+            callbackUrl: URL(string: "http://victoralbertos.com")!,
             scope: "r_basicprofile"
         )
         

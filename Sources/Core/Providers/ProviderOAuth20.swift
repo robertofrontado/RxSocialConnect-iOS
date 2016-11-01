@@ -12,14 +12,14 @@ public protocol ProviderOAuth20: ProviderOAuth {
     
     var consumerKey: String {get set}
     var consumerSecret: String {get set}
-    var callbackUrl: NSURL {get set}
+    var callbackUrl: URL {get set}
     var scope: String {get set}
     
     var authorizeUrl: String {get set}
     var accessTokenUrl: String {get set}
     var responseType: String {get set}
     
-    init(consumerKey: String, consumerSecret: String, callbackUrl: NSURL, scope: String)
+    init(consumerKey: String, consumerSecret: String, callbackUrl: URL, scope: String)
 }
 
 public extension ProviderOAuth20 {

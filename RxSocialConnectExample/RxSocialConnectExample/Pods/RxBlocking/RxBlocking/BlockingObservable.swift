@@ -1,6 +1,6 @@
 //
 //  BlockingObservable.swift
-//  Rx
+//  RxBlocking
 //
 //  Created by Krunoslav Zaher on 10/19/15.
 //  Copyright © 2015 Krunoslav Zaher. All rights reserved.
@@ -20,5 +20,6 @@ If you think you need to use a `BlockingObservable` this is usually a sign that 
 design.
 */
 public struct BlockingObservable<E> {
+    let timeout: RxTimeInterval?
     let source: Observable<E>
 }
