@@ -49,7 +49,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>RxTests.xcscheme</key>
+		<key>RxTest.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -57,11 +57,6 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>36BFFE499BC6ACE3948C090FBA485E1F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>40FF1C77152F384080A1A02E90A36DA9</key>
 		<dict>
 			<key>primary</key>
@@ -72,7 +67,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5081FA5998CAA489ABCA1F353727E577</key>
+		<key>4E42E279CFDD217DD1E01288875D8F3A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -93,6 +88,11 @@
 			<true/>
 		</dict>
 		<key>9F131BBD560982CCAF4B901716A01FFC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A7E8354B8588920EF53A238D4B81617D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

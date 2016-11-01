@@ -218,7 +218,7 @@ Apache License
    limitations under the License.
 
 
-## RxTests
+## RxTest
 
 **The MIT License**
 **Copyright © 2015 Krunoslav Zaher**

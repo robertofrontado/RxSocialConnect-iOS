@@ -4,16 +4,16 @@ use_frameworks!
 target 'RxSocialConnect' do
     pod 'OAuthSwift', '~> 1.0.0'
     
-    pod 'RxSwift', '~> 3.0.0-beta.1'
-    pod 'RxBlocking', '~> 3.0.0-beta.1'
+    pod 'RxSwift', '~> 3.0'
+    pod 'RxBlocking', '~> 3.0'
     
     pod 'Alamofire', '~> 4.0'
     
-    pod 'Moya', '8.0.0-beta.2'
+    pod 'Moya', '~> 8.0.0-beta.2'
     pod 'Moya/RxSwift'
 end
 
 target 'RxSocialConnectTests' do
     pod 'Nimble', '~> 5.0.0'
-    pod 'RxTests', '~> 3.0.0-beta.1'
+    pod 'RxTest', '~> 3.0'
 end
