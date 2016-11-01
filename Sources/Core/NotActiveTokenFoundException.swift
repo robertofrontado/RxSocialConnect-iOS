@@ -8,8 +8,8 @@
 
 import Foundation
 
-public class NotActiveTokenFoundException {
+open class NotActiveTokenFoundException {
 
-    public static let error = NSError(domain: "There is no active token for the provider requested", code: -1, userInfo: nil)
+    open static let error = NSError(domain: "There is no active token for the provider requested", code: -1, userInfo: nil)
     
 }

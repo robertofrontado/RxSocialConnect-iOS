@@ -8,18 +8,18 @@
 
 import OAuthSwift
 
-public class InstagramApi20: ProviderOAuth20 {
+open class InstagramApi20: ProviderOAuth20 {
     
-    public var consumerKey: String
-    public var consumerSecret: String
-    public var callbackUrl: NSURL
-    public var scope: String
+    open var consumerKey: String
+    open var consumerSecret: String
+    open var callbackUrl: URL
+    open var scope: String
     
-    public var authorizeUrl: String = "https://api.instagram.com/oauth/authorize"
-    public var accessTokenUrl: String = ""
-    public var responseType: String = "token"
+    open var authorizeUrl: String = "https://api.instagram.com/oauth/authorize"
+    open var accessTokenUrl: String = ""
+    open var responseType: String = "token"
     
-    required public init(consumerKey: String, consumerSecret: String, callbackUrl: NSURL, scope: String) {
+    required public init(consumerKey: String, consumerSecret: String, callbackUrl: URL, scope: String) {
         self.consumerKey = consumerKey
         self.consumerSecret = consumerSecret
         self.callbackUrl = callbackUrl

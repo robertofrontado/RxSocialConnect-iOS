@@ -9,25 +9,26 @@
 import RxSwift
 import OAuthSwift
 
-public class RxSocialConnect {
+open class RxSocialConnect {
     
-    private let ERROR_RETRIEVING_TOKEN = "Error retrieving token"
+    fileprivate let ERROR_RETRIEVING_TOKEN = "Error retrieving token"
+    private static var oauth1Swift: OAuth1Swift!
+    private static var oauth2Swift: OAuth2Swift!
     
-    public static func with<T: ProviderOAuth1>(viewController: UIViewController, providerOAuth1: T) -> Observable<OAuthSwiftCredential> {
+    open static func with<T: ProviderOAuth1>(_ viewController: UIViewController, providerOAuth1: T) -> Observable<OAuthSwiftCredential> {
         
-        let key = String(T).componentsSeparatedByString(".").last!
+        let key = String(describing: T.self).components(separatedBy: ".").last!
 
         if let response = TokenCache.INSTANCE.get(key, classToken: OAuthSwiftCredential.self) {
             return response
         }
         
-        let oauth1Swift = providerOAuth1.getOauth1Swift()
+        oauth1Swift = providerOAuth1.getOauth1Swift()
         
-        oauth1Swift.authorize_url_handler = CustomURLHandler(viewController: viewController, callbackUrl: providerOAuth1.callbackUrl)
+        oauth1Swift.authorizeURLHandler = CustomURLHandler(viewController: viewController, callbackUrl: providerOAuth1.callbackUrl)
         
         return Observable.create({ subscribe in
-            
-            oauth1Swift.authorizeWithCallbackURL(
+            oauth1Swift.authorize(withCallbackURL:
                 providerOAuth1.callbackUrl,
                 success: { credential, response, parameters in
                     parseParametersIntoCredential(credential, parameters: parameters)
@@ -42,27 +43,27 @@ public class RxSocialConnect {
                     subscribe.onCompleted()
                 }
             )
-            return NopDisposable.instance
+            return Disposables.create()
         })
     }
     
-    public static func with<T: ProviderOAuth20>(viewController: UIViewController, providerOAuth20: T) -> Observable<OAuthSwiftCredential> {
+    open static func with<T: ProviderOAuth20>(_ viewController: UIViewController, providerOAuth20: T) -> Observable<OAuthSwiftCredential> {
         
-        let key = String(T).componentsSeparatedByString(".").last!
+        let key = String(describing: T.self).components(separatedBy: ".").last!
         
         if let response = TokenCache.INSTANCE.get(key, classToken: OAuthSwiftCredential.self) {
             return response
         }
         
-        let oauth2Swift = providerOAuth20.getOauth2Swift()
+        oauth2Swift = providerOAuth20.getOauth2Swift()
         
-        oauth2Swift.authorize_url_handler = CustomURLHandler(viewController: viewController,  callbackUrl: providerOAuth20.callbackUrl)
+        oauth2Swift.authorizeURLHandler = CustomURLHandler(viewController: viewController,  callbackUrl: providerOAuth20.callbackUrl)
         
         let state = generateStateWithLength(20) as String
         
         return Observable.create({ subscribe in
             
-            oauth2Swift.authorizeWithCallbackURL(
+            oauth2Swift.authorize(withCallbackURL:
                 providerOAuth20.callbackUrl,
                 scope: providerOAuth20.scope,
                 state: state,
@@ -79,29 +80,29 @@ public class RxSocialConnect {
                     subscribe.onCompleted()
                 }
             )
-            return NopDisposable.instance
+            return Disposables.create()
         })
     }
     
-    public static func closeConnection<T>(classToken: T.Type) -> Observable<Void> {
+    open static func closeConnection<T>(_ classToken: T.Type) -> Observable<Void> {
         return Observable.deferred {
-            let key = String(classToken).componentsSeparatedByString(".").last!
+            let key = String(describing: classToken).components(separatedBy: ".").last!
             TokenCache.INSTANCE.evict(key)
-            return Observable.just()
+            return Observable.empty()
         }
     }
     
-    public static func closeConnections() -> Observable<Void> {
+    open static func closeConnections() -> Observable<Void> {
         return Observable.deferred {
             TokenCache.INSTANCE.evictAll()
-            return Observable.just()
+            return Observable.empty()
         }
     }
     
-    public static func getOAuthCredential<T>(classToken: T.Type) -> Observable<OAuthSwiftCredential> {
+    open static func getOAuthCredential<T>(_ classToken: T.Type) -> Observable<OAuthSwiftCredential> {
         return Observable.deferred {
             
-            let key = String(T).componentsSeparatedByString(".").last!
+            let key = String(describing: T.self).components(separatedBy: ".").last!
             
             if let credential = TokenCache.INSTANCE.get(key, classToken: OAuthSwiftCredential.self) {
                 return credential
@@ -112,20 +113,21 @@ public class RxSocialConnect {
     }
     
     // MARK: - Private methods
-    private static func generateStateWithLength (len : Int) -> NSString {
+    fileprivate static func generateStateWithLength (_ len : Int) -> NSString {
         let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
         let randomString : NSMutableString = NSMutableString(capacity: len)
         for _ in 0..<len {
             let length = UInt32 (letters.length)
             let rand = arc4random_uniform(length)
-            randomString.appendFormat("%C", letters.characterAtIndex(Int(rand)))
+            randomString.appendFormat("%C", letters.character(at: Int(rand)))
         }
         return randomString
     }
     
-    private static func parseParametersIntoCredential(credential: OAuthSwiftCredential, parameters: [String: String]) {
-        if let expiresIn:String = parameters["expires_in"], offset = Double(expiresIn)  {
-            credential.oauth_token_expires_at = NSDate(timeInterval: offset, sinceDate: NSDate())
+    fileprivate static func parseParametersIntoCredential(_ credential: OAuthSwiftCredential, parameters: OAuthSwift.Parameters) {
+        if let expiresIn = parameters["expires_in"] as? String,
+            let offset = Double(expiresIn)  {
+            credential.oauthTokenExpiresAt = Date(timeInterval: offset, since: Date())
         }
     }
 }

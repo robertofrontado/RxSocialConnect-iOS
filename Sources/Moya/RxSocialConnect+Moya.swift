@@ -13,23 +13,23 @@ import RxBlocking
 
 public extension RxSocialConnect {
 
-    public static func addOAuthHeaders<T: ProviderOAuth1, Target: TargetType>(providerOAuth1: T.Type, endpoint: Endpoint<Target>) -> Endpoint<Target>? {
+    public static func addOAuthHeaders<T: ProviderOAuth1, Target: TargetType>(_ providerOAuth1: T.Type, endpoint: Endpoint<Target>) -> Endpoint<Target>? {
         
         do {
-            let credential = try RxSocialConnect.getOAuthCredential(T).toBlocking().first()
-            let headers = credential!.makeHeaders(NSURL(string: endpoint.URL)!, method: getOAuthSwiftMethod(endpoint.method), parameters: [:])
-            return endpoint.endpointByAddingHTTPHeaderFields(headers)
+            let credential = try RxSocialConnect.getOAuthCredential(T.self).toBlocking().first()
+            let headers = credential!.makeHeaders(URL(string: endpoint.URL)!, method: getOAuthSwiftMethod(endpoint.method), parameters: [:])
+            return endpoint.adding(newHttpHeaderFields: headers)
         } catch {
             return endpoint
         }
     }
     
-    public static func addOAuthHeaders<T: ProviderOAuth20, Target: TargetType>(providerOAuth20: T.Type, endpoint: Endpoint<Target>) -> Endpoint<Target> {
+    public static func addOAuthHeaders<T: ProviderOAuth20, Target: TargetType>(_ providerOAuth20: T.Type, endpoint: Endpoint<Target>) -> Endpoint<Target> {
 
         do {
-            let credential = try RxSocialConnect.getOAuthCredential(T).toBlocking().first()
-            let headers = ["Authorization" : "Bearer \(credential!.oauth_token)"]
-            return endpoint.endpointByAddingHTTPHeaderFields(headers)
+            let credential = try RxSocialConnect.getOAuthCredential(T.self).toBlocking().first()
+            let headers = ["Authorization" : "Bearer \(credential!.oauthToken)"]
+            return endpoint.adding(newHttpHeaderFields: headers)
         } catch {
             print(NotActiveTokenFoundException.error.domain)
             return endpoint
@@ -37,19 +37,19 @@ public extension RxSocialConnect {
     }
         
     // MARK: - Private methods
-    private static func getOAuthSwiftMethod(oAuthMethod: Moya.Method) -> OAuthSwiftHTTPRequest.Method {
+    fileprivate static func getOAuthSwiftMethod(_ oAuthMethod: Moya.Method) -> OAuthSwiftHTTPRequest.Method {
         switch(oAuthMethod) {
-        case .GET:
+        case .get:
             return .GET
-        case .POST:
+        case .post:
             return .POST
-        case .PUT:
+        case .put:
             return .PUT
-        case .DELETE:
+        case .delete:
             return .DELETE
-        case .PATCH:
+        case .patch:
             return .PATCH
-        case .HEAD:
+        case .head:
             return .HEAD
         default:
             return .GET

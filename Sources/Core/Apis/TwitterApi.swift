@@ -8,17 +8,17 @@
 
 import OAuthSwift
 
-public class TwitterApi: ProviderOAuth1 {
+open class TwitterApi: ProviderOAuth1 {
     
-    public var consumerKey: String
-    public var consumerSecret: String
-    public var callbackUrl: NSURL
+    open var consumerKey: String
+    open var consumerSecret: String
+    open var callbackUrl: URL
     
-    public var requestTokenUrl: String = "https://api.twitter.com/oauth/request_token"
-    public var authorizeUrl: String = "https://api.twitter.com/oauth/authorize"
-    public var accessTokenUrl: String = "https://api.twitter.com/oauth/access_token"
+    open var requestTokenUrl: String = "https://api.twitter.com/oauth/request_token"
+    open var authorizeUrl: String = "https://api.twitter.com/oauth/authorize"
+    open var accessTokenUrl: String = "https://api.twitter.com/oauth/access_token"
     
-    required public init(consumerKey: String, consumerSecret: String, callbackUrl: NSURL) {
+    required public init(consumerKey: String, consumerSecret: String, callbackUrl: URL) {
         self.consumerKey = consumerKey
         self.consumerSecret = consumerSecret
         self.callbackUrl = callbackUrl
